@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Nilai Mahasiswa</title>
+    <link rel="stylesheet" href="style.css"> <!-- Menghubungkan file CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Menghubungkan font dari Google Fonts -->
+</head>
+<body>
+    <header>
+        <h1>Kalkulator Nilai Mahasiswa</h1> <!-- Judul halaman -->
+    </header>
+    
+    <div class="kontainer-kalkulator"> <!-- Kontainer untuk kalkulator -->
+        <form id="formKalkulatorNilai"> <!-- Form untuk input nilai -->
+            <label for="nilaiTugas">Nilai Tugas (25%)</label>
+            <input type="number" id="nilaiTugas" min="0" max="100" required> <!-- Input untuk nilai tugas -->
+
+            <label for="nilaiUTS">Nilai UTS (25%)</label>
+            <input type="number" id="nilaiUTS" min="0" max="100" required> <!-- Input untuk nilai UTS -->
+
+            <label for="nilaiUAS">Nilai UAS (50%)</label>
+            <input type="number" id="nilaiUAS" min="0" max="100" required> <!-- Input untuk nilai UAS -->
+
+            <button type="button" onclick="hitungNilai()">Hitung Nilai</button> <!-- Tombol untuk menghitung nilai -->
+        </form>
+        <div id="hasil"></div> <!-- Tempat untuk menampilkan hasil -->
+    </div>
+
+    <!-- Pop-up untuk menampilkan pesan -->
+    <div id="popupNilai" class="nilai">
+        <div class="konten-nilai">
+            <span class="tutup-button" onclick="tutupNilai()">&times;</span> <!-- Tombol untuk menutup pop-up -->
+            <p id="pesanPopup"></p> <!-- Tempat untuk menampilkan pesan -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kalkulator Nilai Mahasiswa - Dibuat Oleh Muhammad Daffa Rafif Wibowo | 122140036 | Prak Pemweb RA</p> <!-- Informasi footer -->
+    </footer>
+
+    <script src="script.js"></script> <!-- Menghubungkan file JavaScript -->
+</body>
+</html>
